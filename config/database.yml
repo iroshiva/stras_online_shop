@@ -78,6 +78,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  database: stras-online-shop_staging
+  username: stras-online-shop
+  password: <%= ENV['STRAS-ONLINE-SHOP_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
   database: stras-online-shop_production
